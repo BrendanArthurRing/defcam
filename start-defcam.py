@@ -8,11 +8,16 @@ GPIO.setup(4, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 # Initialize the camera
 picam2 = picamera2.Picamera2()
+
+# Edit controls
+picam2.camera_controls["Saturation"] = 0
+
+
 camera_config = picam2.create_still_configuration()
 
 
 # Modify the camera configuration
-camera_config["Saturation"] = 0.0  # Increase saturation (values > 1.0)
+#camera_config["Saturation"] = 0.0  # Increase saturation (values > 1.0)
 # Other controls you can adjust:
 # camera_config["Sharpness"] = 1.5  # Increase sharpness
 # camera_config["Contrast"] = 1.2  # Increase contrast
