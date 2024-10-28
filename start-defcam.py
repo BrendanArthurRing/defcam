@@ -13,7 +13,7 @@ camera_config = picam2.create_still_configuration(
     controls={
         "Saturation": 0.0, # Floating point number from 0.0 to 32.0
         "Sharpness": 5.0, # Floating point number from 0.0 to 16.0
-        "Contrast": 5.0, # Floating point number from 0.0 to 32.0
+        "Contrast": 0.0, # Floating point number from 0.0 to 32.0
         "AwbEnable": False
     }
 )
