@@ -9,7 +9,15 @@ GPIO.setup(4, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 # Initialize the camera
 picam2 = picamera2.Picamera2()
 
-camera_config = picam2.create_still_configuration(controls={"Saturation": 0.0})
+camera_config = picam2.create_still_configuration(
+    controls={
+        "Saturation": 0.0, # Floating point number from 0.0 to 32.0
+        "Sharpness": 5.0, # Floating point number from 0.0 to 16.0
+        "Contrast": 5.0, # Floating point number from 0.0 to 32.0
+        "AwbEnable": False
+    }
+)
+
 print("Camera Configuration")
 print(camera_config)
 
