@@ -9,11 +9,9 @@ GPIO.setup(4, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 # Initialize the camera
 picam2 = picamera2.Picamera2()
 
-# Edit controls
-picam2.camera_controls["Saturation"] = 0
-
-
 camera_config = picam2.create_still_configuration()
+
+picam2.set_controls({"Saturation": 0.0})
 
 
 # Modify the camera configuration
