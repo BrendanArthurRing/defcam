@@ -17,7 +17,7 @@ camera_config = picam2.create_still_configuration(
         "AwbEnable": False, # Turn on or off with True False
         #picam2.set_controls({"AfMode": controls.AfModeEnum.Continuous})
         #"AfMode": "Manual", # Enableing Manual Focus Setting
-        "AfSpeed": controls.AfSpeedEnum.Fast # Setting the Focus Setting
+        #"AfSpeed": controls.AfSpeedEnum.Fast # Setting the Focus Setting
     }
 )
 
