@@ -9,11 +9,11 @@ GPIO.setup(4, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 # Initialize the camera
 picam2 = picamera2.Picamera2()
 
-camera_config = picam2.create_still_configuration()
+camera_config = picam2.create_still_configuration(controlls={"Saturation": 0.0})
 print("Camera Configuration")
 print(camera_config)
 
-picam2.set_controls({"Saturation": 0.0})
+#picam2.set_controls({"Saturation": 0.0})
 
 print("Camera Configuration")
 print(camera_config)
