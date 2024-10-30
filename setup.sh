@@ -30,6 +30,6 @@ i2cdump -y 1 0x75
 wget https://cdn.pisugar.com/release/pisugar-power-manager.sh
 bash pisugar-power-manager.sh -c release
 
-echo 'lpf () {latest_photo=$(find /home/$USER/photos/ -name "*.jpg" -printf "%T@ %p\n" | sort -nr | head -1 | awk "{print $2}") ; fbi -a "$latest_photo" ; }' >> /home/$USER/.bashrc
+echo 'lpf () {latest_photo=$(find /home/$USER/photos/ -name "*.jpg" -printf "%T@ %p\n" | sort -nr | head -1 | awk \'{print $2}\') ; fbi -a "$latest_photo" ; }' >> /home/$USER/.bashrc
 source /home/$USER/.bashrc
 
